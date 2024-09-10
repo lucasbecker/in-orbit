@@ -1,0 +1,14 @@
+version: '3.9'
+
+name: in-orbit-db
+
+services:
+  postgres:
+    image: bitnami/postgresql:13.16.0
+    restart: unless-stopped
+    ports:
+      - ${DATABASE_PORT:-5432}:5432
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME:-inorbit}
+      POSTGRES_USER: ${DATABASE_USER:-postgres}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-password}
