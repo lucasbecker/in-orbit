@@ -18,5 +18,5 @@ export async function createGoal({
     })
     .returning()
 
-  return { goal: result[0] }
+  return result[0]
 }

@@ -53,7 +53,5 @@ export async function getWeekGoals() {
       eq(goalCompletionCounts.goalId, goalsCreatedUpToWeek.id)
     )
 
-  return {
-    weekGoals,
-  }
+  return weekGoals
 }
